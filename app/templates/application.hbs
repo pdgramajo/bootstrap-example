@@ -1,3 +1,56 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      {{#link-to 'application' class="navbar-brand" }}Start Bootstrap{{/link-to}}
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li>
+          {{#link-to 'about.about'}}About{{/link-to}}
+        </li>
+        <li>
+          {{#link-to 'service.service'}}Service{{/link-to}}
+        </li>
+        <li>
+         {{#link-to 'contact.contact'}}Contact{{/link-to}}
+       </li>
+       <li>
+         {{#link-to 'contact.new'}}New Contact{{/link-to}}
+       </li>
+     </ul>
+   </div>
+   <!-- /.navbar-collapse -->
+ </div>
+ <!-- /.container -->
+</nav>
 
-{{outlet}}
+<!-- Page Content -->
+<div class="container" id="ember-app">
+  <br><br><br>
+  <div class="jumbotron"> 
+    {{outlet}}
+  </div>
+</div>
+<!-- /.container -->
+
+
+<footer class="footer">
+  <div class="container">
+    <p class="text-muted">ESTE ES EL FOOTER</p>
+  </div>
+</footer>
+
+<style type="text/css">
+
+</style>
+
+

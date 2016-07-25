@@ -1,0 +1,141 @@
+<div>
+ <div class="jplist-panel">           
+
+  <!-- views control -->
+  <div 
+  class="jplist-views" 
+  data-control-type="views" 
+  data-control-name="views" 
+  data-control-action="views"
+  data-default="jplist-grid-view">
+
+  <button type="button" class="jplist-view jplist-list-view" data-type="jplist-list-view"></button>
+  <button type="button" class="jplist-view jplist-grid-view" data-type="jplist-grid-view"></button>
+  <button type="button" class="jplist-view jplist-thumbs-view" data-type="jplist-thumbs-view"></button>
+</div>
+
+</div>
+<!-- HTML data -->
+<div class="list">
+  {{#each item in model}}
+  <!-- item 1 -->
+  <div class="list-item"> 
+   {{item.Email}}
+ </div>
+
+ {{/each}}
+
+
+</div>
+
+<!-- no results found -->
+<div class="jplist-no-results">
+  <p>No results found</p>
+    <p>no hay nada para mostrar</p>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<div class="col-md-12">
+  <ul>
+   {{#each item in model}} 
+   <li> 
+     <div class="alert alert-success" role="alert">
+      <span>
+       
+       {{item.message}}
+       
+     </span>
+     <span>
+      <button type="button" class="Edit" {{action 'edit' item.id}} data-toggle="modal" data-target="#myModal" aria-label="Edit"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
+    </span>
+
+    <span>
+      <button type="button" class="delete" {{action 'delete' item.id}} aria-label="Edit"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+    </span>
+  </div>
+</li>
+{{/each}}
+</ul> 
+
+</div>
+
+<!-- Trigger the modal with a button 
+
+
+<!-- Modal 
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+   <!-- Modal content
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            {{#input type="email" class="form-control" id="email1" placeholder="Enter email" value=email}}{{/input}}
+          </div>
+          <div class="form-group">
+            <label for="pass">Password</label>
+            {{#input type="password" class="form-control" id="pass1" placeholder="Password" value=pass}}{{/input}}
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            {{#input type="textarea" class="form-control" id="message1" placeholder="write here your message" value=message}}{{/input}}
+          </div>
+        </form>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+{{outlet}}
+-->
+<script>
+  $('document').ready(function(){
+
+   $('#demo').jplist({        
+    itemsBox: '.list' 
+    ,itemPath: '.list-item' 
+    ,panelPath: '.jplist-panel' 
+  });
+   
+ });
+</script>

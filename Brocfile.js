@@ -11,10 +11,41 @@ var app = new EmberApp();
 // environments, specify an object as the first parameter. That
 // object's keys should be the environment name and the values
 // should be the asset to use in that environment.
+/*
+			  <link href="jplist-core.min.css" rel="stylesheet" type="text/css" />
+			  <script src="jplist-core.min.js"></script>
+
+			  <!-- Views Control -->
+			  <link href="jplist-views-control.min.css" rel="stylesheet" type="text/css" />
+			  <script src="jplist-views-control.min.js"></script>
+			  */
 //
 // If the library that you are including contains AMD or ES6
 // modules that you would like to import into your application
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
+app.import('bower_components/bootstrap/dist/css/bootstrap.css');
+app.import('bower_components/bootstrap/dist/css/bootstrap.css.map', {
+	destDir: 'assets'
+});
+app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot', {
+	destDir: 'fonts'
+});
+app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf', {
+	destDir: 'fonts'
+});
+app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.svg', {
+	destDir: 'fonts'
+});
+app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff', {
+	destDir: 'fonts'
+});
+app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2', {
+	destDir: 'fonts'
+});
+
+app.import('bower_components/bootstrap/dist/js/bootstrap.js');
+
+//app.import('');
 
 module.exports = app.toTree();
